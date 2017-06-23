@@ -2,14 +2,4 @@ stage 'Checkout'
 node() {
 deleteDir()
 checkout scm
-
-stage 'Build'
-node() {
-deleteDir()
-checkout scm
-  
-stage 'Deploy Desenvolvimento'
-node() {
-deleteDir()
-checkout scm
  }}
