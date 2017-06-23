@@ -7,9 +7,8 @@ stage 'Build'
 node() {
 deleteDir()
 checkout scm
- }}
- 
- stage 'Deploy Desenvolvimento'
+  
+stage 'Deploy Desenvolvimento'
 node() {
 deleteDir()
 checkout scm
