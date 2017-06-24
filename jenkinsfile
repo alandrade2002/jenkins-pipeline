@@ -1,7 +1,4 @@
-
- 
-Jenkinsfile (Pipeline declarativo)
-pipeline {
+ pipeline {
     agent any
     stages {
         stage('Example') {
