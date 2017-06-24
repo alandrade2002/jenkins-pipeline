@@ -1,6 +1,6 @@
 
  
- Jenkinsfile (Pipeline declarativo)
+Jenkinsfile (Pipeline declarativo)
 pipeline {
     agent any
     stages {
