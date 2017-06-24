@@ -8,10 +8,9 @@ pipeline {
         }
         stage('Example Deploy') {
             when {
-                expression { BRANCH_NAME ==~ /(production|staging)/ }
-                anyOf {
+                allOf {
+                    branch 'production'
                     environment name: 'DEPLOY_TO', value: 'production'
-                    environment name: 'DEPLOY_TO', value: 'staging'
                 }
             }
             steps {
