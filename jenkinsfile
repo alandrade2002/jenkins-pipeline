@@ -1,17 +1,1 @@
-node("docker") {
-    docker.withRegistry('<<https://hub.docker.com>>', '<<alandrade2002>>') {
-    
-    git url: "<<https://github.com/alandrade2002/jenkins-pipeline.git>>", credentialsId: '<<alandrade2002>>'    
-    
-        "git rev-parse HEAD > C:\Users\alex\.git\commit-id"
-        def commit_id = readFile('C:\Users\alex\.git\commit-id').trim()
-        println commit_id
-        
-        stage "build"
-        def app = docker.build "your-project-name"
-    
-        stage "publish"
-        app.push 'master'
-        app.push "${commit_id}"
-    }
-}
+
